@@ -1,0 +1,9 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+        }
+
+.cf:after {
+    content: "";
+    display: block;
+    clear: both;
+        }

@@ -1,0 +1,7 @@
+function mainMenu () {
+
+}
+
+function subMenu () {
+	
+}
