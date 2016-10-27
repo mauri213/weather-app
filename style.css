@@ -12,22 +12,40 @@ body {
 }
 
 #head {
-	background-color: #333333;
+	background-color: #2C464F;
 	height: 100px;
 	overflow: auto;
 	padding-left: 2%;
 	font-family: 'Oxygen', sans-serif;
+}
+#head date {
+	/*float: right;*/
+	color: #FFFFFF;
+	font-family: 'Oxygen', sans-serif;
+	padding-bottom: 30px;
+}
+.logo {
+	margin: 0;
+	float: left;
+	height: 100px;
+	width: 100px;
+	padding: 10px;
+	background-color: #2C464F;
 }
 
 h1 {
 	color: #EFEFEF;
 }
 
+button {
+	float: right;
+}
+
 .white {
 	background-color: #FFFFFF;
 	opacity: 0.4;
-	width: 70%;
-	height: 40px;
+	width: 80%;
+	height: 50px;
 	margin: 0 auto;
 	/*box-shadow: 2px 2px 1px #FFFFFF;*/
 	
@@ -45,10 +63,18 @@ h3 {
     clear: both;
         }
 
-@media (min-width: 900px) {
-	#whole {
-		width: 50%;
-		padding-left: 5px;
-		margin: 0;
+@media (min-width: 700px) {
+	#whole div {
+		width: 46%;
+		height: 170px;
+		float: left;
+		padding: 2px;
+		text-align: center;
+	}
+	.white {
+		margin: 2%;
+	}
+	button {
+		display: none;
 	}
 };
