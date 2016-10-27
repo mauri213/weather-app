@@ -9,21 +9,47 @@ function start () {
 }
 
 function buildApp (cities) {
-	var list = document.createElement('ul'); // create an unordered list
-	for (var i = 0; i < cities.length; i++) { 
-		var forecast = new ForecastView('li', cities[i]); // list of cities
-		forecast.render();
-		list.appendChild(forecast.element); // append the list item of cities to the ul
-	}
-	document.body.appendChild(list); // append the 
+	// var list = document.createElement('div'); // create an unordered list
+	// list.id = 'whole';
+	// for (var i = 0; i < cities.length; i++) { // loop so the cities iterrate
+	// 	var forecast = new ForecastView('div', cities[i]); // list items of cities
+	// 	forecast.render(); //
+	// 	list.appendChild(forecast.element); // append the list item of cities to the ul
+	// }
+	// document.body.appendChild(list); // append the list item to the ul
+	var appView = new AppView('div', cities);
+	appView.render();
+	document.body.appendChild(appView.element);
 }
 
 start();
 
-function View (tagName, data) {
-	this.element = document.createElement(tagName);
+function View (tagName, data) { // creating a function View with the element tagName and data
+	this.element = document.createElement(tagName); 
 	this.data = data;
 }
+
+function AppView () {
+	View.apply(this, arguments);
+}
+
+AppView.protoype = Object.create(View.prototype);
+AppView.prototype.render = function () {
+	var today = new Date();
+	this.element.innerHTML =
+		'<div id="head">' +
+			'<h1>Weather</h1>' +
+			'<date>' + today.toLocaleString() + '</date>' +
+		'</div>' +
+		'<div id="whole"></div>';
+	var whole = this.element.querySelector('#whole');
+	for (var i = 0; i < this.data.length; i++) {
+		var city = this.data[i];
+		var view = new ForecastView('div', city);
+		view.render();
+		whole.appendChild(view.element);
+	}
+};
 
 function ForecastView () {
 	View.apply(this, arguments);
@@ -31,6 +57,19 @@ function ForecastView () {
 
 ForecastView.prototype = Object.create(View.prototype);
 ForecastView.prototype.render = function () {
-	this.element.textContent = this.data.name;
+	this.element.classList.add('white');
+	this.element.innerHTML =
+		'<h3>' + this.data.name + '</h3>' +
+		'<button>+</button>' + // float right
+		'<div>' +
+			'<h4>Wind</h4>' +
+		'</div>';
+	this.bindEvents();
 };
-
+ForecastView.prototype.bindEvents = function () {
+	var _this = this;
+	var button = this.element.querySelector('button');
+	button.addEventListener('click', function () {
+		_this.element.classList.toggle('expanded');
+	});
+};
