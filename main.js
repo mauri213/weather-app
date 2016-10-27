@@ -62,8 +62,9 @@ ForecastView.prototype.render = function () {
 		'<h3>' + this.data.name + '</h3>' +
 		'<button>+</button>' + // float right
 		'<div>' +
-			'<h4>Wind</h4>' +
+			'<h4>City</h4>'+ '<h4>Conditions</h4>' + '<h4>Hi</h4>' + '<h4>Lo</h4>' + '<h4>Wind</h4>'
 		'</div>';
+
 	this.bindEvents();
 };
 ForecastView.prototype.bindEvents = function () {
