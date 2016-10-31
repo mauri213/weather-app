@@ -1,6 +1,6 @@
 function start () {
 	$.ajax({
-		url: 'http://api.openweathermap.org/data/2.5/find?lat=-37&lon=-118&cnt=10&appid=7cd032422ed7196011cec831381eb45b',
+		url: 'http://api.openweathermap.org/data/2.5/find?lat=-37&lon=-35&cnt=10&appid=7cd032422ed7196011cec831381eb45b',
 		method: 'GET',
 		success: function (results) {
 			buildApp(results.list);
@@ -55,10 +55,13 @@ function ForecastView () {
 	View.apply(this, arguments);
 }
 
-
-
+function kToF (kelvins) {
+	return ((kelvins -273.15)*9/5)+32;
+}
 ForecastView.prototype = Object.create(View.prototype);
 ForecastView.prototype.render = function () {
+	var max = Math.floor(kToF(this.data.main.temp_max));
+	var min = Math.floor(kToF(this.data.main.temp_min));
 	this.element.classList.add('white');
 	this.element.innerHTML =
 		'<h5>' + this.data.name + '</h5>' +
@@ -67,9 +70,9 @@ ForecastView.prototype.render = function () {
 			'<h5 id="conditions">Conditions</h5>' +
 			'<p>' + this.data.weather[0].description + '<p>' +
 			'<h5 id="hi">Hi</h5>' +
-			'<p>' + this.data.main.temp_max + '</p>' +
+			'<p>' + max + '</p>' +
 			'<h5 id="lo">Lo</h5>' +
-			'<p>' + this.data.main.temp_min + '<p>' +
+			'<p>' + min + '<p>' +
 			'<h5 id="wind">Wind</h5>' + 
 			'<p>' + this.data.wind.speed + ' MPH' + '<p>'
 		'</div>';
