@@ -69,10 +69,10 @@ ForecastView.prototype.render = function () {
 		'<div>' +
 			'<h5 id="conditions">Conditions</h5>' +
 			'<p id="description">' + this.data.weather[0].description + '<p>' + 
-			'<img src="high.png">' +
+			'<div id="highgraphic">' + '<img src="high.png">' + '</div>' +
 			'<h5 id="hi">Hi</h5>' + 
 			'<p id="hidata">' + max + '</p>' +
-			'<img src="lo.png">' +
+			'<div id="lographic">' + '<img src="lo.png">' + '</div>' +
 			'<h5 id="lo">Lo</h5>' +
 			'<p id="lodata">' + min + '<p>' +
 			'<h5 id="wind">Wind</h5>' + 
