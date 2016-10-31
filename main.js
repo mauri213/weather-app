@@ -84,7 +84,14 @@ ForecastView.prototype.render = function () {
 ForecastView.prototype.bindEvents = function () {
 	var _this = this;
 	var button = this.element.querySelector('button');
+	var sub = this.element.querySelector('button');
 	button.addEventListener('click', function () {
 		_this.element.classList.toggle('expanded');
+		if (_this.element.classList.contains('expanded')) {
+			button.textContent = '-';
+		} else {
+			button.textContent = '+';
+		}
+
 	});
 };
