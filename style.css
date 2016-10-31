@@ -3,25 +3,25 @@
         }
 
 body {
-	background-image: url('stormy.jpg');
+	background-image: url('stormyblur.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: auto;
-	/*opacity: 0.4;*/
 	filter: alpha(opacity= 50);
 }
 
 #head {
-	background-color: #1a237e;
 	height: 100px;
 	overflow: auto;
 	padding-left: 2%;
 	font-family: 'Oxygen', sans-serif;
+	/*font-family: 'Muli', sans-serif;*/
 }
 #head date {
 	/*float: right;*/
 	color: #FFFFFF;
 	font-family: 'Oxygen', sans-serif;
+	
 	padding-bottom: 30px;
 }
 .logo {
@@ -30,7 +30,7 @@ body {
 	height: 100px;
 	width: 100px;
 	padding: 10px;
-	background-color: #1a237e;
+	/*background-color: #1a237e;*/
 }
 
 h1 {
@@ -56,7 +56,8 @@ button {
 	
 }
 h3 {
-	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Oxygen', sans-serif;
 	text-align: left;
 	color: #000000;
 	padding-left: 2%;
@@ -89,17 +90,17 @@ h3 {
 	}
 	#wind {
 		position: relative;
-		top: 45px;
+		bottom: 400px;
 		left: 130px;
 	}
 	#hi {
 		position: relative;
-		top: 145px;
+		bottom: 70px;
 		left: 130px;
 	}
 	#lo {
 		position: relative;
-		top: 155px;
+		bottom: 70px;
 		left: 130px;
 	}
 	.white {
