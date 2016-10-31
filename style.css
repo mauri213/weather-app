@@ -24,6 +24,10 @@ body {
 	
 	padding-bottom: 30px;
 }
+h5 {
+	text-align: left;
+	padding-left: 2px;
+}
 .logo {
 	margin: 0;
 	float: left;
@@ -85,23 +89,33 @@ h3 {
 	}
 	#conditions {
 		position: relative;
-		bottom: 63px;
+		bottom: 45px;
 		left: 390px;
 	}
 	#wind {
 		position: relative;
-		bottom: 400px;
+		bottom: 160px;
 		left: 130px;
 	}
 	#hi {
 		position: relative;
-		bottom: 70px;
+		bottom: 51px;
 		left: 130px;
+	}
+	.higraphic {
+		position: relative;
+		left: 130px;
+		height: 40px;
 	}
 	#lo {
 		position: relative;
-		bottom: 70px;
+		bottom: 50px;
 		left: 130px;
+	}
+	.lographic {
+		position: relative;
+		left: 130px;
+		height: 40px;
 	}
 	.white {
 		margin: 2%;
