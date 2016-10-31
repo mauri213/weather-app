@@ -59,10 +59,10 @@ ForecastView.prototype = Object.create(View.prototype);
 ForecastView.prototype.render = function () {
 	this.element.classList.add('white');
 	this.element.innerHTML =
-		'<h3>' + this.data.name + '</h3>' +
+		'<h5>' + this.data.name + '</h5>' +
 		'<button>+</button>' + // float right
 		'<div>' +
-			'<h4 id="city">City</h4>'+ '<h4 id="conditions">Conditions</h4>' + '<h4 id="hi">Hi</h4>' + '<h4 id="lo">Lo</h4>' + '<h4 id="wind">Wind</h4>'
+			'<h4 id="conditions">Conditions</h4>' + '<h4 id="hi">Hi</h4>' + '<h4 id="lo">Lo</h4>' + '<h4 id="wind">Wind</h4>'
 		'</div>';
 
 	this.bindEvents();
