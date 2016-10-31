@@ -65,13 +65,13 @@ ForecastView.prototype.render = function () {
 		'<button>+</button>' + // float right
 		'<div>' +
 			'<h5 id="conditions">Conditions</h5>' +
-			'<p>' + this.data.weather[0].description + '<p>' +
+			'<p id="description">' + this.data.weather[0].description + '<p>' +
 			'<h5 id="hi">Hi</h5>' +
-			'<p>' + this.data.main.temp_max + '</p>' +
+			'<p id="hidata">' + this.data.main.temp_max + '</p>' +
 			'<h5 id="lo">Lo</h5>' +
-			'<p>' + this.data.main.temp_min + '<p>' +
+			'<p id="lodata">' + this.data.main.temp_min + '<p>' +
 			'<h5 id="wind">Wind</h5>' + 
-			'<p>' + this.data.wind.speed + ' MPH' + '<p>'
+			'<p id="speed">' + this.data.wind.speed + ' MPH' + '<p>'
 		'</div>';
 
 	this.bindEvents();

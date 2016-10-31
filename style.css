@@ -89,18 +89,23 @@ h3 {
 	}
 	#conditions {
 		position: relative;
-		bottom: 45px;
+		bottom: 35px;
 		left: 390px;
 	}
 	#wind {
 		position: relative;
-		bottom: 160px;
-		left: 130px;
+		bottom: 260px;
+		left: 50px;
 	}
 	#hi {
 		position: relative;
-		bottom: 51px;
-		left: 130px;
+		bottom: 110px;
+		left: 180px;
+	}
+	#hidata {
+		position: relative;
+		bottom: 150px;
+		left: 140px;
 	}
 	.higraphic {
 		position: relative;
@@ -109,8 +114,23 @@ h3 {
 	}
 	#lo {
 		position: relative;
-		bottom: 50px;
-		left: 130px;
+		bottom: 130px;
+		left: 170px;
+	}
+	#lodata {
+		position: relative;
+		bottom: 170px;
+		left: 140px;
+	}
+	#description {
+		position: relative;
+		bottom: 20px;
+		left: 310px;
+	}
+	#speed{
+		position: relative;
+		bottom: 250px;
+		left: -50px;
 	}
 	.lographic {
 		position: relative;
