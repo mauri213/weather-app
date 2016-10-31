@@ -12,7 +12,7 @@ body {
 }
 
 #head {
-	background-color: #2C464F;
+	background-color: #1a237e;
 	height: 100px;
 	overflow: auto;
 	padding-left: 2%;
@@ -30,7 +30,7 @@ body {
 	height: 100px;
 	width: 100px;
 	padding: 10px;
-	background-color: #2C464F;
+	background-color: #1a237e;
 }
 
 h1 {
@@ -39,6 +39,11 @@ h1 {
 
 button {
 	float: right;
+	position: relative;
+	bottom: 25px;
+	border: none;
+    outline: none;
+    background-color: #FFFFFF;
 }
 
 .white {
@@ -70,6 +75,32 @@ h3 {
 		float: left;
 		padding: 2px;
 		text-align: center;
+	}
+	#city {
+		text-align: left;
+		position: relative;
+		bottom: 25px;
+		left: 10px;
+	}
+	#conditions {
+		position: relative;
+		bottom: 63px;
+		left: 390px;
+	}
+	#wind {
+		position: relative;
+		top: 45px;
+		left: 130px;
+	}
+	#hi {
+		position: relative;
+		top: 145px;
+		left: 130px;
+	}
+	#lo {
+		position: relative;
+		top: 155px;
+		left: 130px;
 	}
 	.white {
 		margin: 2%;

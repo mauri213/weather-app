@@ -62,7 +62,7 @@ ForecastView.prototype.render = function () {
 		'<h3>' + this.data.name + '</h3>' +
 		'<button>+</button>' + // float right
 		'<div>' +
-			'<h4>City</h4>'+ '<h4>Conditions</h4>' + '<h4>Hi</h4>' + '<h4>Lo</h4>' + '<h4>Wind</h4>'
+			'<h4 id="city">City</h4>'+ '<h4 id="conditions">Conditions</h4>' + '<h4 id="hi">Hi</h4>' + '<h4 id="lo">Lo</h4>' + '<h4 id="wind">Wind</h4>'
 		'</div>';
 
 	this.bindEvents();
