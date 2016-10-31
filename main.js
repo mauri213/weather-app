@@ -55,6 +55,8 @@ function ForecastView () {
 	View.apply(this, arguments);
 }
 
+
+
 ForecastView.prototype = Object.create(View.prototype);
 ForecastView.prototype.render = function () {
 	this.element.classList.add('white');
@@ -62,7 +64,14 @@ ForecastView.prototype.render = function () {
 		'<h5>' + this.data.name + '</h5>' +
 		'<button>+</button>' + // float right
 		'<div>' +
-			'<h4 id="conditions">Conditions</h4>' + '<h4 id="hi">Hi</h4>' + '<h4 id="lo">Lo</h4>' + '<h4 id="wind">Wind</h4>'
+			'<h5 id="conditions">Conditions</h5>' +
+			'<p>' + this.data.weather[0].description + '<p>' +
+			'<h5 id="hi">Hi</h5>' +
+			'<p>' + this.data.main.temp_max + '</p>' +
+			'<h5 id="lo">Lo</h5>' +
+			'<p>' + this.data.main.temp_min + '<p>' +
+			'<h5 id="wind">Wind</h5>' + 
+			'<p>' + this.data.wind.speed + ' MPH' + '<p>'
 		'</div>';
 
 	this.bindEvents();
