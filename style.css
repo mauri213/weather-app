@@ -8,6 +8,7 @@ body {
 	background-repeat: no-repeat;
 	overflow: auto;
 	filter: alpha(opacity= 50);
+	z-index: -1;
 }
 
 #head {
@@ -41,26 +42,57 @@ h1 {
 	color: #EFEFEF;
 }
 
+.place {
+	display: block;
+}
 button {
 	float: right;
-	position: relative;
 	bottom: 25px;
+	right: 30px;
 	border: none;
-    outline: none;
     background-color: #FFFFFF;
+    cursor: pointer;
+}
+.white {
+	opacity: 0.2;
+    display: inline-block;
+     background-color: #FFFFFF;
+     height: 50px;
+     width: 80%;
+     /*bottom: 40px;*/
+}
+   
+
+.dropdown {
+	color: black;
+    text-decoration: none;
+    background-color: #3e8e41;
+   	display: none;  
+   	min-width: 140px;
 }
 
-.white {
-	background-color: #FFFFFF;
-	opacity: 0.4;
-	width: 80%;
-	height: 50px;
-	margin: 0 auto;
-	/*box-shadow: 2px 2px 1px #FFFFFF;*/
-	
+.expanded .dropdown {
+	display: block;
 }
-h3 {
-	/*font-family: 'Raleway', sans-serif;*/
+
+/*.dropdown > h5,
+p, 
+div{
+	opacity: 0.2;
+	position: relative;
+    display: inline-block;
+     background-color: #FFFFFF;
+     width: 50%;
+     height: 30px;
+     display: block;
+}*/
+/*.dropdown  {
+	display: block;
+}*/
+	
+
+h3{
+	font-family: 'Raleway', sans-serif;
 	font-family: 'Oxygen', sans-serif;
 	text-align: left;
 	color: #000000;
@@ -91,6 +123,11 @@ h3 {
 		position: relative;
 		bottom: 30px;
 		left: 420px;
+	}
+	#contain {
+		visibility: visible;
+		position: none;
+		min-width: 0px;
 	}
 	#wind {
 		position: relative;
@@ -146,5 +183,8 @@ h3 {
 	}
 	button {
 		display: none;
+	}
+	.dropdown {
+		display: block;
 	}
 };

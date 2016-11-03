@@ -39,7 +39,7 @@ AppView.prototype.render = function () {
 	this.element.innerHTML =
 		'<div id="head">' +
 			'<h1>Weather</h1>' +
-			'<date>' + today.toLocaleString() + '</date>' +
+			'<div>' + today.toLocaleString() + '</div>' +
 		'</div>' +
 		'<div id="whole"></div>';
 	var whole = this.element.querySelector('#whole');
@@ -64,19 +64,22 @@ ForecastView.prototype.render = function () {
 	var min = Math.floor(kToF(this.data.main.temp_min));
 	this.element.classList.add('white');
 	this.element.innerHTML =
-		'<h5>' + this.data.name + '</h5>' +
-		'<button>+</button>' + // float right
-		'<div>' +
-			'<h5 id="conditions">Conditions</h5>' +
-			'<p id="description">' + this.data.weather[0].description + '<p>' + 
-			'<div id="highgraphic">' + '<img src="high.png">' + '</div>' +
-			'<h5 id="hi">Hi</h5>' + 
-			'<p id="hidata">' + max + '</p>' +
-			'<div id="lographic">' + '<img src="lo.png">' + '</div>' +
-			'<h5 id="lo">Lo</h5>' +
-			'<p id="lodata">' + min + '<p>' +
-			'<h5 id="wind">Wind</h5>' + 
-			'<p id="speed">' + this.data.wind.speed + ' MPH' + '<p>'
+		
+		'<div class="contain cf" >' +
+			'<div>' + '<button>+</button>' +
+			'<h5 class="place" >' + this.data.name + '</h5>' + '</div>' +
+			'<div class="dropdown">' +
+				'<h5 class="item" id="conditions">Conditions</h5>' +
+				'<p class="item" id="description">' + this.data.weather[0].description + '<p>' + 
+				// '<div class="item" id="highgraphic">' + '<img src="high.png">' + '</div>' +
+				'<h5 class="item" id="hi">Hi</h5>' + 
+				'<p class="item" id="hidata">' + max + '</p>' +
+				// '<div class="item" id="lographic">' + '<img src="lo.png">' + '</div>' +
+				'<h5 class="item" id="lo">Lo</h5>' +
+				'<p class="item" id="lodata">' + min + '<p>' +
+				'<h5 class="item" id="wind">Wind</h5>' + 
+				'<p class="item" id="speed">' + this.data.wind.speed + ' MPH' + '<p>' +
+			'</div>'
 		'</div>';
 
 	this.bindEvents();
